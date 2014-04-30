@@ -1,5 +1,8 @@
 package edu.sjsu.cmpe.cache.client;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
@@ -12,8 +15,8 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 public class DistributedCacheService implements CacheServiceInterface {
     private final String cacheServerUrl;
 
-    public DistributedCacheService(String serverUrl) {
-        this.cacheServerUrl = serverUrl;
+    public DistributedCacheService(String servers) {
+        this.cacheServerUrl = servers;
     }
 
     /**
